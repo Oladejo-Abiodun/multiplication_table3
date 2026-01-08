@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Exercise 3: Count Even Numbers</p>
+    <p id="display"></p>
+    <script>
+      let input = prompt("Enter numbers separated by spaces");
+      let nums = input.split(" ").map(Number);
+
+      function countEven(nums) {
+        let total = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] % 2 === 0) {
+            total++;
+          }
+        }
+        return total;
+      }
+      let answer = countEven(nums);
+      alert(answer);
+    </script>
+  </body>
+</html>

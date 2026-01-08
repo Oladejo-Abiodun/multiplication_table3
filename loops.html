@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Exercise 1: Sum of Numbers</p>
+    <script>
+      let input = prompt("Enter numbers separated by spaces");
+      let nums = input.split(" ").map(Number);
+
+      function press(nums) {
+        let total = 0;
+        for (let i = 0; i < nums.length; i++) {
+          total += nums[i];
+        }
+        return total;
+      }
+      let result = press(nums);
+      alert(result);
+    </script>
+  </body>
+</html>

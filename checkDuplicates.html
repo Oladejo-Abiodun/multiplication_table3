@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt("Enter numbers separated by spaces");
+      let nums = input.split(" ").map(Number);
+
+      function checkDuplicate(nums) {
+        let seen = new Set();
+
+        for (let i = 0; i < nums.length; i++) {
+          if (seen.has(nums[i])) {
+            return `Yes, duplicates found with ${nums[i]}`;
+          }
+          seen.add(nums[i]);
+        }
+
+        return "No duplicates found";
+      }
+
+      alert(checkDuplicate(nums));
+    </script>
+    <!-- <script>
+      let input = prompt("Enter numbers separated by spaces");
+      let nums = input.split(" ").map(Number);
+
+      function checkDuplicate(nums) {
+        let number = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+          for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] === nums[j]) {
+              number = nums[i];
+              return `Yes, duplicates found with ${number}`;
+            }
+          }
+        }
+        return "duplicate not found";
+      }
+      let result = checkDuplicate(nums);
+      alert(result);
+    </script> -->
+  </body>
+</html>

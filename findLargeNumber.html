@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Exercise 2: Find Largest Number</p>
+    <script>
+      let input = prompt("Enter numbers separated by spaces");
+      let nums = input.split(" ").map(Number);
+
+      function findLargeNumber(nums) {
+        let result = nums[0];
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] > result) {
+            result = nums[i];
+          }
+        }
+        return result;
+      }
+      let answer = findLargeNumber(nums);
+      alert(answer);
+    </script>
+  </body>
+</html>
